@@ -1,4 +1,10 @@
 from app.assistant import run_assistant
 
-if __name__ == "__main__":
-    run_assistant()
+while True:
+    user = input("You: ")
+
+    if user.lower() == "exit":
+        break
+
+    reply = run_assistant(user)
+    print("Vexa:", reply)
