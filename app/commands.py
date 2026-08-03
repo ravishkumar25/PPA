@@ -1,10 +1,11 @@
 from datetime import datetime
+from skills.greeting import greet
 
 
 def execute_command(user):
 
     if user in ["hi", "hello"]:
-        return "Hello Ravish! 👋"
+        return greet()
 
     elif user == "time":
         return f"Current time is {datetime.now().strftime('%I:%M %p')}"

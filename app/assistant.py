@@ -1,4 +1,4 @@
-from commands import execute_command
+from app.commands import execute_command
 
 
 def run_assistant():
