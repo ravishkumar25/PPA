@@ -1,4 +1,4 @@
-from datetime import datetime
+from commands import execute_command
 
 
 def run_assistant():
@@ -11,16 +11,9 @@ def run_assistant():
             print("PPA shutting down...")
             break
 
-        elif user == "hi" or user == "hello":
-            print("PPA: Hello Ravish! 👋")
+        response = execute_command(user)
 
-        elif user == "time":
-            current_time = datetime.now().strftime("%I:%M %p")
-            print(f"PPA: Current time is {current_time}")
-
-        elif user == "date":
-            current_date = datetime.now().strftime("%d %B %Y")
-            print(f"PPA: Today's date is {current_date}")
-
+        if response:
+            print("PPA:", response)
         else:
             print("PPA: Sorry, I don't know that command yet.")
